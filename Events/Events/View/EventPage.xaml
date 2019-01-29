@@ -6,20 +6,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:Events.ViewModel"
     x:Class="Events.View.EventPage"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/background.jpg"/>
+    </Page.Background>
 
     <Grid>
+        <Grid.FocusVisualPrimaryBrush>
+            <ImageBrush Stretch="Fill"/>
+        </Grid.FocusVisualPrimaryBrush>
         <Grid.DataContext>
             <ViewModel:EventViewModel/>
         </Grid.DataContext>
-        <ListView x:Name="LstEvents" HorizontalAlignment="Left" Height="694" Margin="831.284,124,0,0" VerticalAlignment="Top" Width="521.188" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" ItemsSource="{Binding EventCatalogSingleton}">
-            <ListView.RenderTransform>
-                <CompositeTransform SkewX="0.16" TranslateX="0.497"/>
-            </ListView.RenderTransform>
-        </ListView>
-        <Button x:Name="btnAdd" Content="Add event" HorizontalAlignment="Left" Height="48" Margin="386,466,0,0" VerticalAlignment="Top" Width="132"/>
-        <Button x:Name="btnRemove" Content="Remove event" HorizontalAlignment="Left" Height="48" Margin="218,466,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBlock HorizontalAlignment="Left" Height="113" Margin="105,98,0,0" TextWrapping="Wrap" Text="Event Makers" VerticalAlignment="Top" Width="385" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="btnWedding" Content="WEDDING" HorizontalAlignment="Left" Height="72" Margin="631,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnBirthday" Content="BIRTHDAY" HorizontalAlignment="Left" Height="72" Margin="802,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnAnniversary" Content="ANNIVERSARY" HorizontalAlignment="Left" Height="72" Margin="972,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnConfirmation" Content="CONFIRMATION" HorizontalAlignment="Left" Height="72" Margin="1142,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnBachelor" Content="BACHELOR" HorizontalAlignment="Left" Height="72" Margin="1312,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnValentinesDay" Content="VALENTINES DAY" HorizontalAlignment="Left" Height="72" Margin="631,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnHalloween" Content="HALLOWEEN" HorizontalAlignment="Left" Height="72" Margin="802,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnThanksgiving" Content="THANKSGIVING" HorizontalAlignment="Left" Height="72" Margin="972,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnNewYears" Content="NEW YEARS EVE" HorizontalAlignment="Left" Height="72" Margin="1142,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnEasterHunt" Content="EASTER HUNT" HorizontalAlignment="Left" Height="72" Margin="1312,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
 
     </Grid>
 </Page>
