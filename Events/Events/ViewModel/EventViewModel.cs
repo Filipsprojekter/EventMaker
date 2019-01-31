@@ -23,8 +23,12 @@ namespace Events.ViewModel
             EventCatalogSingleton = EventCatalogSingleton.Instance;
 
             EventCategories = new ObservableCollection<EventCategory>();
-            EventCategories.Add(new EventCategory("Wedding", new Uri("ms-appx:///Assets/background.jpg")));
-            EventCategories.Add(new EventCategory("Birthday", new Uri("ms-appx:///Assets/background.jpg")));
+            EventCategories.Add(new EventCategory("Wedding", new Uri("ms-appx:///Assets/wedding.jpg")));
+            EventCategories.Add(new EventCategory("Birthday", new Uri("ms-appx:///Assets/birthday.jpg")));
+            EventCategories.Add(new EventCategory("Halloween", new Uri("ms-appx:///Assets/halloween.jpg")));
+            EventCategories.Add(new EventCategory("Valentines Day", new Uri("ms-appx:///Assets/valentinesDay.png")));
+            EventCategories.Add(new EventCategory("New Years Eve", new Uri("ms-appx:///Assets/NewYearsEve.jpg")));
+            EventCategories.Add(new EventCategory("Bachelorette Party", new Uri("ms-appx:///Assets/bachelorette.jpg")));
 
         }
 

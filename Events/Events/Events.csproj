@@ -158,8 +158,14 @@
     <None Include="Events_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bachelorette.jpg" />
     <Content Include="Assets\background 3.jpg" />
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\birthday.jpg" />
+    <Content Include="Assets\halloween.jpg" />
+    <Content Include="Assets\NewYearsEve.jpg" />
+    <Content Include="Assets\valentinesDay.png" />
+    <Content Include="Assets\wedding.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

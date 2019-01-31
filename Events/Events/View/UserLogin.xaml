@@ -21,7 +21,7 @@
             <Run Text="User"/>
             <Run Text=" login"/>
         </TextBlock>
-        <RelativePanel x:Name="pnlLogin" HorizontalAlignment="Center" Height="407" VerticalAlignment="Center" Width="503" Margin="511,373,486,220" Background="#FF88BCD2">
+        <RelativePanel x:Name="pnlLogin" HorizontalAlignment="Center" Height="407" VerticalAlignment="Center" Width="503" Margin="511,373,486,220" Background="#FF5AB6DD">
             <TextBlock x:Name="txtUsername" HorizontalAlignment="Center" Height="45" Width="270" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Margin="121,135,-121,-135"/>
             <TextBlock x:Name="txtPassword" HorizontalAlignment="Center" Height="45" TextWrapping="Wrap" Text="Username" VerticalAlignment="Center" Width="270" Margin="121,35,-121,-35"/>
             <TextBox x:Name="txbUsername" HorizontalAlignment="Center" Height="45" TextWrapping="Wrap" VerticalAlignment="Center" Width="270" Margin="121,79,-121,-79" Text="{Binding userName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
