@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock x:Name="txtEventCategory" HorizontalAlignment="Center" Height="135" Margin="387,82,376,0" TextWrapping="Wrap" Text="Event category" Width="737" TextAlignment="Center" FontSize="36" FontWeight="Bold" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

@@ -22,6 +22,7 @@ namespace Events.ViewModel
         public AdminViewModel()
         {
             _admins = new ObservableCollection<Admin>();
+            Adminlist();
         }
 
         public string Username { get; set; }
@@ -45,11 +46,8 @@ namespace Events.ViewModel
 
         public void Adminlist()
         {
-            if (_admins.Count == 0)
-            {
                 Admin Admin1 = new Admin("Admin", "Admin");
                 _admins.Add(Admin1);
-            }
         }
 
         public void Check()

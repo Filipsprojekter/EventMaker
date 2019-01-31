@@ -27,6 +27,5 @@ namespace Events.View
             this.InitializeComponent();
         }
 
-  
     }
 }

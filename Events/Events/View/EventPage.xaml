@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:Events.ViewModel"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="Events.View.EventPage"
     mc:Ignorable="d">
     <Page.Background>
@@ -19,16 +20,22 @@
             <ViewModel:EventViewModel/>
         </Grid.DataContext>
         <TextBlock HorizontalAlignment="Left" Height="113" Margin="105,98,0,0" TextWrapping="Wrap" Text="Event Makers" VerticalAlignment="Top" Width="385" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
-        <Button x:Name="btnWedding" Content="WEDDING" HorizontalAlignment="Left" Height="72" Margin="631,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnBirthday" Content="BIRTHDAY" HorizontalAlignment="Left" Height="72" Margin="802,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnAnniversary" Content="ANNIVERSARY" HorizontalAlignment="Left" Height="72" Margin="972,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnConfirmation" Content="CONFIRMATION" HorizontalAlignment="Left" Height="72" Margin="1142,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnBachelor" Content="BACHELOR" HorizontalAlignment="Left" Height="72" Margin="1312,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnValentinesDay" Content="VALENTINES DAY" HorizontalAlignment="Left" Height="72" Margin="631,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnHalloween" Content="HALLOWEEN" HorizontalAlignment="Left" Height="72" Margin="802,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnThanksgiving" Content="THANKSGIVING" HorizontalAlignment="Left" Height="72" Margin="972,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnNewYears" Content="NEW YEARS EVE" HorizontalAlignment="Left" Height="72" Margin="1142,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
-        <Button x:Name="btnEasterHunt" Content="EASTER HUNT" HorizontalAlignment="Left" Height="72" Margin="1312,126,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnWedding" Content="About us" HorizontalAlignment="Left" Height="72" Margin="765,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button x:Name="btnBirthday" Content="Admin" HorizontalAlignment="Left" Height="72" Margin="936,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="Events.View.AdminLogin"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="btnAnniversary" Content="Login" HorizontalAlignment="Left" Height="72" Margin="1106,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="Events.View.UserLogin"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="btnConfirmation" Content="Create account" HorizontalAlignment="Left" Height="72" Margin="1276,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
 
     </Grid>
 </Page>

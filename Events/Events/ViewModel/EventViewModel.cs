@@ -13,6 +13,7 @@ namespace Events.ViewModel
 {
     class EventViewModel : INotifyPropertyChanged
     {
+
         private ObservableCollection<Event> _events;
         public EventCatalogSingleton EventCatalogSingleton { get; set; }
 
@@ -21,7 +22,18 @@ namespace Events.ViewModel
             _events = new ObservableCollection<Event>();
             EventCatalogSingleton = EventCatalogSingleton.Instance;
 
+            EventCategories = new ObservableCollection<EventCategory>();
+            EventCategories.Add(new EventCategory("Wedding", new Uri("ms-appx:///Assets/background.jpg")));
+            EventCategories.Add(new EventCategory("Birthday", new Uri("ms-appx:///Assets/background.jpg")));
+
         }
+
+        public string EventCategory { get; set; }
+        public Uri Uri { get; set; }
+
+        public ObservableCollection<EventCategory> EventCategories { get; set; }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
