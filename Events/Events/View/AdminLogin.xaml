@@ -17,8 +17,8 @@
     </Page.DataContext>
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="633,304,622,644" TextWrapping="Wrap" Text="Admin login" VerticalAlignment="Center" Height="52" Width="245" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
         <RelativePanel x:Name="pnlLogin" HorizontalAlignment="Center" Height="419" VerticalAlignment="Center" Width="503" Margin="511,361,486,220" Background="#FF88BCD2">
+            <TextBlock x:Name="txtError" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="142" Margin="121,230,-201,-242"/>
             <TextBlock x:Name="txtUsername" HorizontalAlignment="Center" Height="45" Width="270" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Margin="121,135,-121,-135"/>
             <TextBlock x:Name="txtPassword" HorizontalAlignment="Center" Height="45" TextWrapping="Wrap" Text="Username" VerticalAlignment="Center" Width="270" Margin="121,35,-121,-35"/>
             <TextBox x:Name="txbUsername" HorizontalAlignment="Center" Height="45" TextWrapping="Wrap" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="270" Margin="121,79,-121,-79"/>
@@ -34,11 +34,11 @@
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Click">
                         <Core:CallMethodAction TargetObject="{Binding Mode=TwoWay}" MethodName="Check"/>
-                    </Core:EventTriggerBehavior >
+                    </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </Button>
-            <TextBlock x:Name="txtError" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="142" Margin="121,230,-201,-242"/>
         </RelativePanel>
+        <TextBlock HorizontalAlignment="Center" Margin="633,304,622,644" TextWrapping="Wrap" Text="Admin login" VerticalAlignment="Center" Height="52" Width="245" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
 
     </Grid>
 </Page>
