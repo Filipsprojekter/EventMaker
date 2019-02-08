@@ -16,7 +16,7 @@
         <ViewModel:UserViewModel/>
     </Page.DataContext>
 
-    <Grid>
+    <Grid Loading="Grid_Loading">
         <TextBlock HorizontalAlignment="Center" Margin="664,312,653,632" TextWrapping="Wrap" VerticalAlignment="Center" Height="56" Width="183" FontSize="36" FontWeight="Bold" TextAlignment="Center">
             <Run Text="User"/>
             <Run Text=" login"/>

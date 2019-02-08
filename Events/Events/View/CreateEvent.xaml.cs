@@ -26,5 +26,72 @@ namespace Events.View
         {
             this.InitializeComponent();
         }
+
+        
+        private void Grid_Loading(FrameworkElement sender, object args)
+        {
+            pnlHide.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnBirthday_Click(object sender, RoutedEventArgs e)
+        {
+            pnlHide.Visibility = Visibility.Visible;
+            if (cmbCategory.SelectedItem == btnBirthday)
+            {
+                txtCategoryName.Text = "Birthday";
+            }
+        }
+
+        private void btnWedding_Click(object sender, RoutedEventArgs e)
+        {
+            pnlHide.Visibility = Visibility.Visible;
+            if (cmbCategory.SelectedItem == btnWedding)
+            {
+                txtCategoryName.Text = "Wedding";
+            }
+        }
+
+        private void btnBachlorette_Click(object sender, RoutedEventArgs e)
+        {
+            pnlHide.Visibility = Visibility.Visible;
+            if (cmbCategory.SelectedItem == btnBachlorette)
+            {
+                txtCategoryName.Text = "Bachlorette";
+            }
+        }
+
+        private void btnAnniversary_Click(object sender, RoutedEventArgs e)
+        {
+            pnlHide.Visibility = Visibility.Visible;
+            if (cmbCategory.SelectedItem == btnAnniversary)
+            {
+                txtCategoryName.Text = "Anniversary";
+            }
+        }
+
+        private void btnValentinesDay_Click(object sender, RoutedEventArgs e)
+        {
+            pnlHide.Visibility = Visibility.Visible;
+            if (cmbCategory.SelectedItem == btnValentinesDay)
+            {
+                txtCategoryName.Text = "Valentines Day";
+            }
+        }
+
+        //private void CheckEvent()
+        //{
+        //    if (txbDescription.Text != "" && txbID.Text != "" && txbName.Text != "" && txbPlace.Text != "" && Calendar.PlaceholderText != "select a date")
+        //    {
+        //        ((Frame)Window.Current.Content).Navigate(typeof(Confirmation));
+        //    }
+        //}
+
+        //private void BtnRequestEvent_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (txbDescription.Text != "" && txbID.Text != "" && txbName.Text != "" && txbPlace.Text != "" && Calendar.PlaceholderText != "select a date")
+        //    {
+        //        ((Frame) Window.Current.Content).Navigate(typeof(Confirmation));
+        //    }
+        //}
     }
 }

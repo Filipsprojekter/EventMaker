@@ -20,17 +20,11 @@ namespace Events.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class UserLogin : Page
+    public sealed partial class Confirmation : Page
     {
-        public UserLogin()
+        public Confirmation()
         {
             this.InitializeComponent();
-        }
-
-        private void Grid_Loading(FrameworkElement sender, object args)
-        {
-            txbUsername.Text = "HelenaG";
-            Passwordbox.Password = "Helena";
         }
     }
 }

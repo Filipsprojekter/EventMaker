@@ -6,8 +6,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Events.Annotations;
 using Events.Model;
+using Events.View;
 
 namespace Events.ViewModel
 {
@@ -59,6 +62,15 @@ namespace Events.ViewModel
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
+        private void CheckEvent()
+        {
+            if ()
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(Confirmation));
+            }
         }
     }
 }
