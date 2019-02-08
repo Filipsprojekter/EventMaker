@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Events.Annotations;
@@ -26,6 +27,8 @@ namespace Events.ViewModel
         public string Place { get; set; }
         public DateTimeOffset Date { get; set; }
         public TimeSpan Time { get; set; }
+        public Handler.EventHandler EventHandler { get; set; }
+        public ICommand CreateEventCommand { get; set; }
 
         public EventViewModel()
         {
@@ -64,13 +67,18 @@ namespace Events.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+      
 
-        private void CheckEvent()
-        {
-            if ()
-            {
-                ((Frame)Window.Current.Content).Navigate(typeof(Confirmation));
-            }
-        }
+
+        //private void CheckEvent()
+        //{
+        //    foreach (Model.Event events in EventCatalogSingleton.Events)
+        //    {
+        //        //if ()
+        //        {
+        //            ((Frame) Window.Current.Content).Navigate(typeof(Confirmation));
+        //        }
+        //    }
+        //}
     }
 }
