@@ -20,9 +20,9 @@ namespace Events.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateEvent : Page
+    public sealed partial class AdminEdit2 : Page
     {
-        public CreateEvent()
+        public AdminEdit2()
         {
             this.InitializeComponent();
         }
