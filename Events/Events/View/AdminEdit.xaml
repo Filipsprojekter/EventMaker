@@ -9,6 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Height="113" Margin="105,98,0,0" TextWrapping="Wrap" Text="Event Makers" VerticalAlignment="Top" Width="385" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+        <ListView x:Name="LstEvents" HorizontalAlignment="Left" Height="633" Margin="831.369,216,0,0" VerticalAlignment="Top" Width="521.188" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" ItemsSource="{Binding EventCatalogSingleton}" FontSize="20">
+            <ListView.RenderTransform>
+                <CompositeTransform SkewX="0.16" TranslateX="0.497"/>
+            </ListView.RenderTransform>
+        </ListView>
+        <Button x:Name="btnAdd" Content="Add event" HorizontalAlignment="Left" Height="48" Margin="417,559,0,0" VerticalAlignment="Top" Width="155" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="btnRemove" Content="Remove event" HorizontalAlignment="Left" Height="48" Margin="218,559,0,0" VerticalAlignment="Top" Width="155" FontWeight="Bold" FontSize="20"/>
+        <ComboBox x:Name="cmbRemove" HorizontalAlignment="Left" Height="28" Margin="218,607,0,0" VerticalAlignment="Top" Width="155" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="txbDescription" HorizontalAlignment="Left" Height="45" Margin="321,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" FontSize="20"/>
+        <TextBox x:Name="txbName" HorizontalAlignment="Left" Height="45" Margin="321,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" FontSize="20"/>
+        <TextBox x:Name="txbPlace" HorizontalAlignment="Left" Height="45" Margin="321,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" FontSize="20"/>
+        <TextBox x:Name="txbID" HorizontalAlignment="Left" Height="45" Margin="321,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,216,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,266,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,316,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,366,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,416,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Height="45" Margin="321,416,0,0" VerticalAlignment="Top" DateFormat="{}{day.integer} {month.full} {year.full}" FirstDayOfWeek="Monday" Width="251"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="164,466,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontSize="20"/>
+        <TimePicker HorizontalAlignment="Left" Height="45" Margin="321,466,0,0" VerticalAlignment="Top" Width="251"/>
 
     </Grid>
 </Page>

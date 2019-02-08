@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Converter\DateTimeConverter.cs" />
+    <Compile Include="Handler\EventHandler.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\EventCatalogSingleton.cs" />
@@ -138,11 +141,11 @@
     <Compile Include="View\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\EventPage.xaml.cs">
-      <DependentUpon>EventPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\CreateEvent.xaml.cs">
       <DependentUpon>CreateEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
@@ -158,8 +161,16 @@
     <None Include="Events_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bachelorette.jpg" />
     <Content Include="Assets\background 3.jpg" />
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\birthday.jpg" />
+    <Content Include="Assets\Confirmation.png" />
+    <Content Include="Assets\halloween.jpg" />
+    <Content Include="Assets\NewYearsEve.jpg" />
+    <Content Include="Assets\Thanksgiving.jpg" />
+    <Content Include="Assets\valentinesDay.png" />
+    <Content Include="Assets\wedding.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -186,11 +197,7 @@
       <Version>12.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Converter\" />
-    <Folder Include="Handler\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="View\AdminEdit.xaml">
       <SubType>Designer</SubType>
@@ -200,11 +207,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\EventPage.xaml">
+    <Page Include="View\CreateEvent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CreateEvent.xaml">
+    <Page Include="View\EventPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

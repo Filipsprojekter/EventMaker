@@ -53,7 +53,7 @@ namespace Events.ViewModel
             {
                 if (user.userName == userName && user.passWord == passWord)
                 {
-                    ((Frame) Window.Current.Content).Navigate(typeof(UserPage));
+                    ((Frame) Window.Current.Content).Navigate(typeof(CreateEvent));
                 }
             }
 
