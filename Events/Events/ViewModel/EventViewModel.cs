@@ -10,6 +10,8 @@ using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Events.Annotations;
+using Events.Common;
+using Events.Handler;
 using Events.Model;
 using Events.View;
 
@@ -28,12 +30,13 @@ namespace Events.ViewModel
         public DateTimeOffset Date { get; set; }
         public TimeSpan Time { get; set; }
         public Handler.EventHandler EventHandler { get; set; }
-        public ICommand CreateEventCommand { get; set; }
+        private RelayCommand _createEventCommand;
 
         public EventViewModel()
         {
             _events = new ObservableCollection<Event>();
             EventCatalogSingleton = EventCatalogSingleton.Instance;
+            EventHandler = new Handler.EventHandler(this);
 
             DateTime dt = System.DateTime.Now;
 
@@ -50,6 +53,12 @@ namespace Events.ViewModel
             EventCategories.Add(new EventCategory("Bachelorette Party", new Uri("ms-appx:///Assets/bachelorette.jpg")));
             EventCategories.Add(new EventCategory("Confirmation", new Uri("ms-appx:///Assets/Confirmation.png")));
 
+        }
+
+        public ICommand CreateEventCommand
+        {
+            get { return _createEventCommand ?? (_createEventCommand = new RelayCommand(EventHandler.CreateEvent)); }
+            set { _createEventCommand = value; }
         }
 
         public string EventCategory { get; set; }
