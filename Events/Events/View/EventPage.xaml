@@ -36,6 +36,13 @@
             </Interactivity:Interaction.Behaviors>
         </Button>
         <Button x:Name="btnConfirmation" Content="Create account" HorizontalAlignment="Left" Height="72" Margin="1276,49,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold"/>
+        <Button Content="Create Event" HorizontalAlignment="Left" Margin="1060,691,0,0" VerticalAlignment="Top" Height="87" Width="211">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="Events.View.CreateEvent"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
 
     </Grid>
 </Page>
