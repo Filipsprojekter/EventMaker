@@ -86,12 +86,12 @@ namespace Events.View
         //    }
         //}
 
-        //private void BtnRequestEvent_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (txbDescription.Text != "" && txbID.Text != "" && txbName.Text != "" && txbPlace.Text != "" && Calendar.PlaceholderText != "select a date")
-        //    {
-        //        ((Frame) Window.Current.Content).Navigate(typeof(Confirmation));
-        //    }
-        //}
+        private void BtnRequestEvent_Click(object sender, RoutedEventArgs e)
+        {
+            if (txbDescription.Text != "" && txbID.Text != "" && txbName.Text != "" && txbPlace.Text != "" && Calendar.PlaceholderText != "select a date")
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(Confirmation));
+            }
+        }
     }
 }
