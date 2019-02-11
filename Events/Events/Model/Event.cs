@@ -8,7 +8,7 @@ namespace Events.Model
 {
     class Event
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Place { get; set; }
@@ -16,7 +16,7 @@ namespace Events.Model
 
         public Event(int id, string name, string description, string place, DateTime dateTime)
         {
-            ID = id;
+            Id = id;
             Name = name;
             Description = description;
             Place = place;
@@ -25,7 +25,7 @@ namespace Events.Model
 
         public override string ToString()
         {
-            return $"{nameof(ID)}: {ID}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}, {nameof(Place)}: {Place}, {nameof(DateTime)}: {DateTime}";
+            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}, {nameof(Place)}: {Place}, {nameof(DateTime)}: {DateTime}";
         }
     }
 }

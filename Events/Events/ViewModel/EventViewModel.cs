@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Events.Annotations;
@@ -22,6 +23,7 @@ namespace Events.ViewModel
 
         private ObservableCollection<Event> _events;
         public EventCatalogSingleton EventCatalogSingleton { get; set; }
+        public static Event SelectedEvent { get; set; }
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -30,7 +32,9 @@ namespace Events.ViewModel
         public DateTimeOffset Date { get; set; }
         public TimeSpan Time { get; set; }
         public Handler.EventHandler EventHandler { get; set; }
-        private RelayCommand _createEventCommand;
+        private ICommand _createEventCommand;
+        private ICommand _deleteEventCommand;
+        private ICommand _selectEventCommand;
 
         public EventViewModel()
         {
@@ -60,6 +64,16 @@ namespace Events.ViewModel
             get { return _createEventCommand ?? (_createEventCommand = new RelayCommand(EventHandler.CreateEvent)); }
             set { _createEventCommand = value; }
         }
+        public ICommand SelectEventCommand
+        {
+            get { return _selectEventCommand ?? (_selectEventCommand = new RelayArgCommand<Event>(ev => EventHandler.SetSelectedEvent(ev))); }
+            set { _selectEventCommand = value; }
+        }
+        public ICommand DeleteEventCommand
+        {
+            get { return _deleteEventCommand ?? (_deleteEventCommand = new RelayCommand(EventHandler.DeleteEvent)); }
+            set { _deleteEventCommand = value; }
+        }
 
         public string EventCategory { get; set; }
         public Uri Uri { get; set; }
@@ -76,6 +90,7 @@ namespace Events.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+       
       
 
 

@@ -27,7 +27,7 @@ namespace Events.Model
 
         public async void LoadUserAsync()
         {
-            var users = await PersistencyServiceUser.LoadEventsFromJsonAsync();
+            //var users = await PersistencyServiceUser.LoadEventsFromJsonAsync();
 
             //Test
             Users.Add(new User("HelenaG", "Helena", "Helena", "Graff", "28580211"));

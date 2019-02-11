@@ -48,7 +48,7 @@ namespace Events.Persistency
             catch (FileNotFoundException ex)
             {
 
-                MessageDialogHelper.Show("File of Events not found! - Loading for the first time?", "File not found!");
+                //MessageDialogHelper.Show("File of Events not found! - Loading for the first time?", "File not found!");
                 return null;
             }
         }

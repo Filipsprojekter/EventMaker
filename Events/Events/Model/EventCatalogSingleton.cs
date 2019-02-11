@@ -4,7 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using Windows.ApplicationModel.Activation;
 using Events.Persistency;
+using Events.ViewModel;
 
 namespace Events.Model
 {
@@ -40,10 +43,11 @@ namespace Events.Model
 
         }
 
-        public void Add(Event newEvent)
+        public  void Add(Event newEvent)
         {
             Events.Add(newEvent);
             PersistencyServiceEvents.SaveEventsAsJsonAsync(Events);
+
         }
 
         public void Remove(Event eventToBeRemoved)
@@ -52,6 +56,7 @@ namespace Events.Model
             PersistencyServiceEvents.SaveEventsAsJsonAsync(Events);
         }
 
+        
 
 
     }

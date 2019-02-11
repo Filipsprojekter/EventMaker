@@ -25,6 +25,8 @@ namespace Events.View
         public AdminEdit()
         {
             this.InitializeComponent();
+           
         }
+        
     }
 }
